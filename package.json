@@ -1,0 +1,19 @@
+{
+  "name": "edulinkone-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool to manage edulink.",
+  "main": "main.ts",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahsan-a/edulinkone-cli.git"
+  },
+  "author": "ahsan-a",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ahsan-a/edulinkone-cli/issues"
+  },
+  "homepage": "https://github.com/ahsan-a/edulinkone-cli#readme"
+}
