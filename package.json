@@ -1,19 +1,39 @@
 {
-  "name": "edulinkone-cli",
-  "version": "1.0.0",
-  "description": "A CLI tool to manage edulink.",
-  "main": "main.ts",
-  "scripts": {
-    "test": "node ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ahsan-a/edulinkone-cli.git"
-  },
-  "author": "ahsan-a",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/ahsan-a/edulinkone-cli/issues"
-  },
-  "homepage": "https://github.com/ahsan-a/edulinkone-cli#readme"
+	"name": "edulinkone-cli",
+	"version": "1.0.0",
+	"description": "A CLI tool to manage edulink.",
+	"main": "./src/main.js",
+	"bin": {
+		"edulink": "./src/main.js"
+	},
+	"scripts": {
+		"create": "npm run build && npm run test",
+		"test": "npm i -g && edulink",
+		"build": "tsc -p .",
+		"serve": "nodemon --watch 'src/main.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ahsan-a/edulinkone-cli.git"
+	},
+	"author": "ahsan-a",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/ahsan-a/edulinkone-cli/issues"
+	},
+	"homepage": "https://github.com/ahsan-a/edulinkone-cli#readme",
+	"dependencies": {
+		"chalk": "^4.1.0",
+		"clear": "^0.1.0",
+		"commander": "^7.2.0",
+		"figlet": "^1.5.0",
+		"inquirer": "^8.0.0",
+		"node-fetch": "^2.6.1",
+		"path": "^0.12.7",
+		"prompt-sync": "^4.2.0",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.7"
+	}
 }
