@@ -273,7 +273,6 @@ const prompts = {
 					for (const a of attachments) {
 						console.log(chalk.cyan(terminalLink(a[0], a[1])));
 					}
-					console.log('\n');
 				}
 
 				console.log(

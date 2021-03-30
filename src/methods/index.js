@@ -1,12 +1,13 @@
 const fs = require('fs');
 var state = require('../state');
+const path = require('path');
 
 module.exports = {
 	capitilise: function (sentence) {
 		return sentence.replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase());
 	},
 	updateConfig: function (name) {
-		fs.writeFileSync(`./src/config/${name}.json`, JSON.stringify(state[name], null, `\t`));
+		fs.writeFileSync(path.resolve(__dirname, `../config/${name}.json`), JSON.stringify(state[name], null, `\t`));
 	},
 	updateAllConfig: function () {
 		const configItems = ['credentials', 'school'];
