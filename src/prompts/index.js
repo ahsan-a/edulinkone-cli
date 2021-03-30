@@ -3,7 +3,6 @@ const chalk = require('chalk');
 const clear = require('clear');
 const figlet = require('figlet');
 const inquirer = require('inquirer');
-const terminalLink = require('terminal-link');
 
 const edulink = require('../edulink');
 const methods = require('../methods');
@@ -246,7 +245,7 @@ const prompts = {
 					.attatchmentFetch(homework.id, a.id)
 					.then((res) => res.json())
 					.then((data) => {
-						attachments.push([a.filename, data.result.attachment.url]);
+						attachments.push(data.result.attachment.url);
 					});
 			}
 			prompts.viewHomeworkMain(homework, returnType, attachments);
@@ -271,7 +270,7 @@ const prompts = {
 				if (attachments.length > 0) {
 					console.log(chalk.bold('Attatchments'));
 					for (const a of attachments) {
-						console.log(chalk.cyan(terminalLink(a[0], a[1])));
+						console.log(chalk.cyan(a));
 					}
 				}
 
