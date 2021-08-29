@@ -1,8 +1,9 @@
-# Edulinkone-CLI
+# DEPRECATED: Edulinkone-CLI
+Please use [the typescript version](https://github.com/ahsan-a/edulinkone-ts) instead.
+<hr />
 
 A CLI client for edulink.
 
-## re-writing this in typescsript
 
 ## Installation
 1. Clone this repository and type `npm i` to install the neccesary npm packages.
